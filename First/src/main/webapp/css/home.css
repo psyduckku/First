@@ -1,0 +1,140 @@
+ @charset "UTF-8";
+
+*{ margin: 0 auto; padding: 0; box-sizing: border-box; 
+}
+section{
+/* 	width: 1120px; */
+	clear: both;
+	overflow: hidden;
+	background-color: rgb(247, 247, 247);
+	display: flex;
+	flex-direction: row;
+}
+/* section 시작 */
+h1{
+	text-align: center;
+}
+/* .topSection{ */
+	height: 137px;
+	overflow: hidden;
+}
+top{
+	clear: both;
+}
+li{
+	list-style: none;
+}
+.topSection{
+/* 	width: 1120px; */
+	background-color: rgb(247, 247, 247);
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+}
+.topCon{
+	padding-top: 30px;	
+}
+
+.left{
+	margin-left: 360px;
+	margin-right: 0px;
+}
+.right{
+	margin-left: 0px;
+}
+.mainSection{
+	width: 700px;
+/* 	display: flex; */
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+.pic img{
+	height: 100%;
+}
+
+.asideSection{
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+}
+.content{
+	height: 230px;
+	border-radius: 20px;
+	background-color: white;
+/* 	display: flex; */
+	flex-direction: row;
+	margin: 30px 25px;
+	box-shadow: 5px 5px 5px -5px gray;
+}
+
+.pic{
+	float:left;
+	width: 230px;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 20px;
+}
+.con{
+	width:400px;
+	height: 100%;
+	padding: 20px;
+	float:left;
+}
+.con_title p{
+	font-size: 25px;
+	text-align: center;
+}
+
+.con_title{
+	overflow: hidden;
+	text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.con_content{
+	width: 300px;
+	height: 120px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+/*   	white-space: nowrap; */
+}
+
+.asideSection{
+	width: 305px;
+	float: left;
+	margin: 30px 0px 30px 30px;
+	
+}
+.deadText{
+	text-align: right;
+	font-size: 5px;
+}
+.sideCon{
+	border-radius: 20px;
+	height: 200px;
+	margin: 30px 0px 30px 0px;
+	background-color: white;
+}
+#imminentNotice{
+	border-radius: 20px;
+	background-color: white;
+	height: 675px;
+	padding: 30px;
+	box-shadow: 5px 5px 5px -5px gray;
+}
+.imminentNotice_title{
+	font-size: 18px;
+	text-align: center;	
+}
+
+.species{
+	margin: 5px 0px 5px 0px;
+}
+
+#sideList{
+	font-size: 8px;
+}
+#myInfoSection{
+	margin-top: 0px;
+	padding: 15px;
+	box-shadow: 5px 5px 5px -5px gray;
+}

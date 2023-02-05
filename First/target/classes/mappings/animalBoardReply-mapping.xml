@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="AnimalReplyDAO">
+	<select id="getReplyList" resultType="animalReplyBoardVO" parameterType="animalReplyBoardVO">
+	SELECT ID, TO_CHAR(REGDATE, 'YYYY/MM/DD HH24:MI:SS') AS REGDATE, REPLY, ASEQ_LIKE, ASEQ_DISLIKE
+FROM ANIMALS_REPLY_BOARD WHERE ASEQ=#{ASEQ}
+	</select>
+	<insert id="insertReply" parameterType="animalReplyBoardVO">
+	INSERT INTO ANIMALS_REPLY_BOARD(ID, ASEQ, ASEQ_REPLY, REPLY) VALUES(#{ID}, #{ASEQ},(SELECT NVL(MAX(ASEQ_REPLY),0)+1 AS ASEQ_REPLY FROM ANIMALS_REPLY_BOARD), #{REPLY})
+	</insert>
+	<select id="getReply" resultType="animalReplyBoardVO" parameterType="animalReplyBoardVO">
+		SELECT * FROM ANIMALS_REPLY_BOARD WHERE ASEQ=#{ASEQ} AND ASEQ_REPLY=(SELECT MAX(ASEQ_REPLY) AS ASEQ_REPLY FROM ANIMALS_REPLY_BOARD WHERE ASEQ=#{ASEQ})
+	</select>
+</mapper>

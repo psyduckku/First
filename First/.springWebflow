@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webflow-project-description>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.9.22.202204280911-RELEASE]]></pluginVersion>
+	<configs>
+		<config>
+			<file>src/main/webapp/WEB-INF/config/presentation-layer.xml</file>
+			<name><![CDATA[presentation-layer]]></name>
+		</config>
+		<config>
+			<file>src/main/resources/mappings/commentBoard-mapping.xml</file>
+			<name><![CDATA[commentBoard-mapping]]></name>
+		</config>
+	</configs>
+</webflow-project-description>
