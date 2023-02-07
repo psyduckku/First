@@ -24,7 +24,7 @@
 			<ul class="menu_nav">
 					<li><a href="#">소개</a></li>
 					<li><a href="getAnimalList.do">유기동물명단</a></li>
-					<li><a href="getAdoptBoardList.do">자유게시판</a></li>
+					<li><a href="getAdoptBoardList.do">분양후기게시판</a></li>
 			</ul>
 			<ul class="login_bar">
 					 <c:choose>

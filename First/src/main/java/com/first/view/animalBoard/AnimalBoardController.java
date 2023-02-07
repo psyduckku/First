@@ -114,7 +114,7 @@ public class AnimalBoardController {
 	public String insertAnimal(@RequestParam HashMap<Object, Object> param, AnimalBoardVO vo) {
 		//RequestParam은 클라이언트가 요청한 쿼리 파라메터에 대한 값을 binding해준다. 스프링에서 default는 GET으로 
 		//받을 경우에 사용하지만, 클라이언트에서 post로 요청(HTML Form이나, ajax의 method:post일경우
-		// RequestPram 값을 받을 수 있다.
+		// RequestParam 값을 받을 수 있다.
 		
 		System.out.println("insertAnimal");
 		

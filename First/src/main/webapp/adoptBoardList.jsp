@@ -14,7 +14,7 @@
 <jsp:include page="./include/header.jsp"></jsp:include>
 <body>
 <div id="container">
-<h1 align="center">자유게시판</h1>
+<h1 align="center">분양후기게시판</h1>
 	<table class="table table-hover" id="contentTable">
 		<tr class="table-default">
 			<td>번호</td><td>제목</td><td>작성자</td><td>작성일자</td><td>조회수</td>

@@ -20,8 +20,10 @@ function fn_addFile(){
 }
 </script>
 <body>
-<div id="container" style='margin-top: 100px;'>
-<h1 align="center">자유게시판</h1>
+<div class="top" style='margin-top: 50px;'></div>
+
+<h1 align="center" style='width: 100%'>분양후기작성</h1>
+<div id="container" style='margin-top: 30px; width: 800px;'>
 <form method="post" action="insertAdoptBoard.do" enctype="multipart/form-data">
 	<table class="table table-hover" id="contentTable">
 		<tr class="table-default">
