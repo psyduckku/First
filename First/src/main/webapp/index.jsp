@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4f58cdeb20.js" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/index.css">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -51,12 +51,6 @@
 				<div id="imminentNotice">
 					<p class="imminentNotice_title">공고기한임박</p>
 				</div>
-<!-- 				<div id="addCon" class="sideCon"> -->
-<!-- 					<h1>광고창</h1> -->
-<!-- 				</div> -->
-<!-- 				<div id="weatherCon" class="sideCon"> -->
-<!-- 					<h1>날씨창입니다.</h1> -->
-<!-- 				</div> -->
 			</div>
 	</div>
 	</section>

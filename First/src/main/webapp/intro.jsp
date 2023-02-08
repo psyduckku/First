@@ -1,14 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<link rel="stylesheet" href="css/intro.css">
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 </head>
+<jsp:include page="./include/header.jsp"/>
 <body>
+<main>
 	<div class="intro_title">
-		동물들에게 새삶을 주세요
+		<h1>동물들에게 새삶을 주세요</h1>
+		<br>
 	</div>
 	
 	<div class="intro_section">
@@ -21,5 +28,7 @@
 		<p>유기된 동물들에게 새로운 삶을 시작할 수 있도록 해주세요</p>
 		<p>사지말고 입양하세요!</p>
 	</div>
+	<img alt="shelterDoggy" src="/resources/img/puppy.jpg" width="150" height="120">
+</main>
 </body>
 </html>

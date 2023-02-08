@@ -31,7 +31,7 @@
 							<div class="head">닉네임</div> <input type="text" name="nick">
 						</li>
 						<li>
-							<div class="head">연락처</div> <input type="text" name="phone">
+							<div class="head">연락처</div> <input type="number" name="phone">
 						</li>
 						<li>
 							<div class="head">주소</div> <input type="text" name="addr">

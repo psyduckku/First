@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+﻿<jsp:include page="./include/header.jsp"></jsp:include>
 <body>
 	<div class="container">
 		<div class="top_section"></div>
