@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="UserBoardDAO">
+	<insert id="insertUser" parameterType="userVO">
+		INSERT INTO USERS (id, pswd , name , nick , phone, addr) VALUES(#{id},#{pswd},#{name},#{nick},#{phone},#{addr})
+	</insert>
+	
+	<select id="getUser" resultType="userVO">
+		SELECT * FROM USERS WHERE id=#{id} and pswd=#{pswd}
+	</select>
+	
+	<select id="getMyInfo" resultType="userVO">
+		SELECT * FROM USERS WHERE id=#{id}
+	</select>
+	
+	<update id="updateUser">
+		UPDATE USERS SET id=#{id}, pswd=#{pswd}, name=#{name}, nick=#{nick}, phone=#{phone}, addr=#{addr} WHERE id=#{id}
+	</update>
+</mapper>

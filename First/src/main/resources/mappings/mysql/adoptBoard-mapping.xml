@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AdoptBoardDAO">
+ 	<insert id="insertAdoptBoard" parameterType="adoptBoardVO">
+ 		INSERT INTO ADOPT_BOARD(ID, SEQ, TITLE, CONTENT) VALUES(#{ID},(SELECT IFNULL(MAX(A.SEQ),0)+1 AS SEQ FROM ADOPT_BOARD A), #{TITLE},#{CONTENT})
+ 	</insert>		
+	
+	<select id="getAdoptBoardList" parameterType="adoptBoardVO" resultType="adoptBoardVO">
+<![CDATA[SELECT SEQ, TITLE, CONTENT, ID, DATE_FORMAT(REGDATE,'%Y/%m/%d') AS REGDATE, CNT FROM ADOPT_BOARD]]>
+		<where>
+			<if test="searchCondition =='TITLE'">
+				AND TITLE LIKE CONCAT('%', #{searchKeyword}, '%')	
+			</if>
+			<if test="searchCondition =='CONTENT'">
+				AND CONTENT LIKE CONCAT('%', #{searchKeyword}, '%')
+			</if>
+		</where>
+		ORDER BY SEQ DESC
+	</select>
+	
+	<select id="getAdoptBoard" parameterType="adoptBoardVO" resultType="adoptBoardVO">
+		SELECT (@R:=@R+1)RN, FLAG_POST, SEQ, TITLE, CONTENT, ID, DATE_FORMAT(REGDATE,'%Y/%m/%d') AS REGDATE , CNT FROM ADOPT_BOARD,(SELECT @R:=0) R WHERE SEQ =#{SEQ}
+	</select>
+	
+	<update id="updateBoard" parameterType="adoptBoardVO">
+		UPDATE ADOPT_BOARD SET TITLE=#{TITLE},CONTENT=#{CONTENT} WHERE SEQ=#{SEQ}
+	</update>
+	
+	<update id="getHitsBoard" parameterType="adoptBoardVO">
+		UPDATE ADOPT_BOARD SET CNT= IFNULL(CNT,0)+1 WHERE SEQ=#{SEQ}
+	</update>
+	
+	<update id="flagSet" parameterType="adoptBoardVO">
+		UPDATE ADOPT_BOARD SET FLAG_POST=#{FLAG_POST} WHERE SEQ=#{SEQ}
+	</update>
+	
+	<resultMap type="adoptBoardVO" id="adoptBoardVO">
+		<result column="SEQ" property="SEQ" />
+		<result column="ID" property="ID" />
+		<result column="TITLE" property="TITLE" />
+		<result column="CONTENT" property="CONTENT" />
+		<result column="FLAG_POST" property="FLAG_POST" />
+	</resultMap>
+	<resultMap type="adoptFileVO" id="adoptFileVO">
+		<result column="STORED_FILE_NAME" property="STORED_FILE_NAME" />
+	</resultMap>
+	
+	
+	<select id="flagPostSet" resultType="adoptBoardVO">
+		SELECT A.SEQ, A.ID, A.TITLE, A.CONTENT, A.FLAG_POST, B.STORED_FILE_NAME FROM ADOPT_BOARD A INNER JOIN IMAGE_FILE B ON (A.SEQ=B.SEQ AND A.FLAG_POST=1)
+	</select>
+	
+	<delete id="deleteBoard" parameterType="adoptBoardVO">
+		DELETE FROM ADOPT_BOARD WHERE SEQ=#{SEQ}
+	</delete>
+	
+	
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="AdoptFileDAO">
+	<insert id="insertAdoptFile" parameterType="HashMap">
+		INSERT INTO IMAGE_FILE(IMAGE_FILE_NO, SEQ, ORIGINAL_FILE_NAME, STORED_FILE_NAME,FILE_SIZE)
+		VALUES((SELECT IFNULL(MAX(I.IMAGE_FILE_NO),0)+1 AS IMAGE_FILE_NO FROM IMAGE_FILE I), (SELECT MAX(SEQ) AS SEQ FROM ADOPT_BOARD), 
+		#{ORIGINAL_FILE_NAME}, #{STORED_FILE_NAME}, #{FILE_SIZE})
+	</insert>
+	
+	<resultMap id="imgResult" type="AdoptFileVO">
+		<result property="STORED_FILE_NAME" column="STORED_FILE_NAME"/>
+	</resultMap>
+		
+	<select id="getImageFile" resultMap="imgResult" parameterType="String">
+		SELECT STORED_FILE_NAME FROM IMAGE_FILE WHERE SEQ = #{SEQ}
+	</select>
+	
+</mapper>

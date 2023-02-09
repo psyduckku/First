@@ -211,7 +211,6 @@ private String CURR_IMAGE_REPO_PATH= rootPath+"\\First\\image\\";
 		}
 		
 		 boardService.getHitsBoard(vo);
-		 System.out.println(vo.getCNT());
 		  
 		model.addAttribute("imageList", imageList);
 		model.addAttribute("adoptBoard", boardService.getAdoptBoard(vo));

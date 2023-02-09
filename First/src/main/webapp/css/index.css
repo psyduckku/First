@@ -23,6 +23,17 @@ top{
 }
 li{
 	list-style: none;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+th, td{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+}
+p{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+th, td{
+	font-family: 'Noto Sans KR', sans-serif;
 }
 .topSection{
 /* 	width: 1120px; */
@@ -99,7 +110,7 @@ li{
 }
 
 .asideSection{
-	width: 305px;
+	width: 350px;
 	float: left;
 	margin: 30px 0px 30px 30px;
 	
@@ -120,12 +131,13 @@ li{
 	height: 675px;
 	padding: 30px;
 	box-shadow: 5px 5px 5px -5px gray;
+	
 }
 .imminentNotice_title{
 	font-size: 18px;
 	text-align: center;	
+	font-family: 'Noto Sans KR', sans-serif;
 }
-
 .species{
 	margin: 5px 0px 5px 0px;
 }

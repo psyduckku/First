@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration
-<!--   PUBLIC "-//mybatis.org//DTD Config 3.0//EN" -->
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-config.dtd">
 
-<!-- <configuration> -->
+<configuration>
 <!-- Properties파일위치 설정 : 어디서? --> 
 <!-- 	<properties resource="db.properties"></properties> -->
 	
@@ -21,12 +21,12 @@
 	
 	<!-- Sql Mapper설정 -->
 	<mappers>
-		<mapper resource="mappings/oracle/user-mapping.xml"/>
-		<mapper resource="mappings/oracle/adoptBoard-mapping.xml"/>
-		<mapper resource="mappings/oracle/adoptReplyBoard-mapping.xml" />
-		<mapper resource="mappings/oracle/animalBoard-mapping.xml"/>
-		<mapper resource="mappings/oracle/animalBoardReply-mapping.xml"/>
-		<mapper resource="mappings/oracle/adoptFile-mapping.xml" />
+		<mapper resource="mappings/mysql/user-mapping.xml"/>
+		<mapper resource="mappings/mysql/adoptBoard-mapping.xml"/>
+		<mapper resource="mappings/mysql/adoptReplyBoard-mapping.xml" />
+		<mapper resource="mappings/mysql/animalBoard-mapping.xml"/>
+		<mapper resource="mappings/mysql/animalBoardReply-mapping.xml"/>
+		<mapper resource="mappings/mysql/adoptFile-mapping.xml" />
 	</mappers>
 	
 </configuration>

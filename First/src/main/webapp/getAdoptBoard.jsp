@@ -90,7 +90,7 @@
 			      <label for="reply" class="form-label mt-4">댓글남기기</label>
 			      <input type="hidden" name="seq" value="${adoptBoard.SEQ}" id="seq">
 			      <input type="text" name="reply" class="form-control" id="reply" aria-describedby="emailHelp" placeholder="Enter Reply">
-			      <small id="notice" class="form-text text-muted">댓글입력고고</small>
+			      <small id="notice" class="form-text text-muted">댓글을 입력하세요</small>
 			      <button id="insertReply" type="button" class="btn btn-primary">Submit</button>
 	    		</div>
 			</td>
@@ -102,6 +102,7 @@
 <script
    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script type="text/javascript">
+var seq=${adoptBoard.SEQ }
 var check = $("input[type='checkbox']");
 check.click(function(){
 	$("p").toggle();
@@ -112,7 +113,7 @@ function callFunction() {
 	$.ajax({
 		url : "${contextPath}/setAFlag.do",
 		type: "post",
-		data : {seq:${adoptBoard.SEQ }},
+		data : {seq:seq},
 		contentType: "application/x-www-form-urlencoded; charset=UTF-8",
 		dataType:"text",
 		success : function(data){

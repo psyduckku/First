@@ -3,6 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/4f58cdeb20.js" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -12,11 +16,11 @@
 	<div class="form_section">
 		<div class="wrap_form">
 			<div class="join_box">
-				<div class="title" align="center"> <h1>마이페이지</h1></div>
+				<div class="title" align="center"> <h1 style="font-family: 'Noto Sans KR', sans-serif;">마이페이지</h1></div>
 				<form name="form">
 					<input type="hidden" name="grade">
 					<input type="hidden" name="joinDate">
-					<ul>
+					<ul style="list-style: none; margin-left: 60px;">
 						<li>
 							<div class="head">아이디</div>  <input type="text" id="id" name="id" value="${myInfo.id}" readonly>
 						</li>
@@ -36,7 +40,7 @@
 							<div class="head">주소</div> <input type="text" id="addr" name="addr" value="${myInfo.addr}">
 						</li>
 					</ul>
-					<button type="button" onclick="sendToForm();return false;">수정완료</button>
+					<button type="button" onclick="sendToForm();return false;" style="margin-left: 150px;">수정완료</button>
 				</form>
 			</div>
 		</div>

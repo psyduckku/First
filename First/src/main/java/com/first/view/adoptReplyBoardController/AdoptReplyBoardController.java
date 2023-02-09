@@ -31,7 +31,7 @@ AdoptReplyBoardService replyService;
 		String id=(String) session.getAttribute("ID");
 		String reply=req.getParameter("reply");
 		String seq=req.getParameter("seq");
-		System.out.println(id+","+reply+","+seq);
+		System.out.println("id:"+id+",reply : "+reply+",seq: "+seq);
 		vo.setID(id);vo.setREPLY(reply); vo.setSEQ(seq);
 		replyService.insertReply(vo);
 		AdoptReplyBoardVO repleOne =  replyService.getReply(vo);
