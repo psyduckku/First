@@ -1,0 +1,59 @@
+@charset "UTF-8";
+*{
+	margin: 0 auto; padding: 0; box-sizing: border-box;
+}
+a{
+	text-decoration: none; color: black; 
+	float: left;
+}
+p{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+th, td{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+li{
+	list-style-type: none;
+	font-family: 'Noto Sans KR', sans-serif;
+	float: left;
+}
+.logo_bar{
+	height: 70px;
+}
+.top_section{
+	height: 110px;
+	background-color: rgb(247, 247, 247);
+}
+.wrap_form{
+	padding: 59px, 69px, 49px, 69px;
+}
+
+.login_box{
+	margin-top: 80px;
+	margin-bottom: 60px;
+	width: 480px;
+	height: 556px;
+	padding: 60px 70px;
+	border-radius: 20px;
+	background-color: #F8FBF9;
+	border: none;
+}
+.user_box{
+	margin-bottom:30px;
+}
+.join_a{
+	padding-left: 260px;
+}
+
+input{
+	width: 338px;
+	height: 47px;
+}
+.join{
+	margin-top: 10px;
+	width: 338px;
+	background-color: #FF914D;
+	border: none;
+	border-radius: 10px;
+	font-size: 1.3em;
+}

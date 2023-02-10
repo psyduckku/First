@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="AdoptReplyBoardDAO" >
+	<insert id="insertReply" parameterType="adoptReplyBoardVO">
+		INSERT INTO ADOPT_REPLY_BOARD(ID, SEQ, SEQ_REPLY, REPLY) VALUES(#{ID}, #{SEQ},(SELECT NVL(MAX(SEQ_REPLY),0)+1 AS SEQ_REPLY FROM ADOPT_REPLY_BOARD), #{REPLY})
+	</insert>
+	
+	<select id="getReplyList" parameterType="adoptReplyBoardVO" resultType="adoptReplyBoardVO">
+		SELECT ID, TO_CHAR(REGDATE, 'YYYY/MM/DD HH24:MI:SS') AS REGDATE, REPLY, SEQ_LIKE, SEQ_DISLIKE
+FROM ADOPT_REPLY_BOARD WHERE SEQ=#{SEQ}
+	</select>
+	
+	<select id="getReply" parameterType="adoptReplyBoardVO" resultType="adoptReplyBoardVO">
+	SELECT * FROM ADOPT_REPLY_BOARD WHERE SEQ=#{SEQ} AND SEQ_REPLY=(SELECT MAX(SEQ_REPLY) AS SEQ_REPLY FROM ADOPT_REPLY_BOARD WHERE SEQ=#{SEQ})
+	</select>
+	
+	<delete id="deleteReplylist" parameterType="adoptReplyBoardVO">                                    
+		DELETE FROM ADOPT_REPLY_BOARD WHERE SEQ=#{SEQ}
+	</delete>
+	
+</mapper>

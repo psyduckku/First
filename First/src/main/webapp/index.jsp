@@ -36,17 +36,18 @@
 	<div class="right">
 			<div class="asideSection">
 				<div id="myInfoSection" class="sideCon">
-		
 		<c:choose>
 		 	<c:when test="${loginUser!=null}">
-		 		<li><a href="#">${loginUser.id}</a>님 환영합니다.</li>
-		 		<li><a href="logoutUser.do">(로그아웃)</a></li>
+		 		<li><a href="#">${loginUser.id}</a>님 환영합니다.<a href="logoutUser.do">(로그아웃)</a></li>
 		 		<li><a href="javascript:getMypage()">마이페이지</a></li>
 		 	</c:when>
 		 	<c:otherwise>					 
 				<li><a href="login.jsp">로그인</a></li>
 			</c:otherwise>
-		</c:choose>
+		</c:choose><br>
+		<c:if test="${loginUser.id eq 'admin' }">
+			<li><a href="adminPage.jsp">관리자페이지</a> </li>
+			</c:if>
 				</div>
 				<div id="imminentNotice">
 					<p class="imminentNotice_title">공고기한임박</p>

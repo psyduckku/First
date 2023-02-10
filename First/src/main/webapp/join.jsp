@@ -3,7 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="css/join1.css">
+<link rel="stylesheet" href="css/join.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/4f58cdeb20.js" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -36,7 +40,7 @@
 						<li>
 							<div class="head">주소</div> <input type="text" name="addr">
 						</li>
-						<li> <input type="submit" value="가입" class="join"></li>
+						<li> <input type="submit" value="등  록" class="join"></li>
 					</ul>
 			</form>
 			</div>

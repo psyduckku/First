@@ -31,7 +31,7 @@
 			</c:forEach>	
 <!-- 		</option> -->
 	</select>
-	<input type="submit" value="검색">
+	<input type="submit" value=" 검 색 " class="search">
 </form>
 </div>
 	<table class="table table-hover">

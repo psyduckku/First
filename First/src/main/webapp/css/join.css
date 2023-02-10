@@ -3,18 +3,33 @@
 
 .top_section{
 	height: 100px;
-	background-color: #e3e3e3;
+	background-color: #f2f4f7;
 }
-.form_section{}
-
+.wrap_form{
+	height: 1000px;
+}
+li{
+	list-style: none;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+th, td{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+}
+p{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+th, td{
+	font-family: 'Noto Sans KR', sans-serif;
+}
 .join_box{
-	margin-top: 30px;
+	margin-top: 130px;
 	width: 600px;
 	height: 691px;
 	border: 1px solid  #e3e3e3;
 	padding: 82px 69px;
 	border-radius: 20px;
-	
+	background-color: #F8FBF9;
 }
 li{
 	list-style-type: none;
@@ -22,6 +37,7 @@ li{
 .head{
 	display: inline-block;
 	width: 130px;
+	text-align: center;
 }
 .title{
 	height: 60px;
@@ -30,14 +46,19 @@ li{
 input{
 	width: 300px;
 	height: 47px;
-	outline: 0.3px solid gray;
+	outline: 0.3px solid #f 2f4f7;
 }
 .join{
 	width: 435px;
 	margin-top: 25px;
+	background-color: #FF914D;
+	border: none;
+	border-radius: 10px;
+	font-size: 20px;
 }
 
 .submit{
+	margin-left: 10px;
 	margin-top: 10px;
 	width: 402px;
 }

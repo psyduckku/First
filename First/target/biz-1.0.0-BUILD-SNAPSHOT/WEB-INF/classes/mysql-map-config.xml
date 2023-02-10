@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+<!-- Properties파일위치 설정 : 어디서? --> 
+<!-- 	<properties resource="db.properties"></properties> -->
+	
+	<!-- Alias설정 -->
+	<typeAliases>
+		<typeAlias alias="userVO" type="com.first.biz.user.UserVO"/>
+		<typeAlias alias="animalBoardVO" type="com.first.biz.animalBoard.AnimalBoardVO"/>
+		<typeAlias alias="adoptReplyBoardVO" type="com.first.biz.adoptReplyBoard.AdoptReplyBoardVO"/>
+		<typeAlias alias="adoptBoardVO" type="com.first.biz.adoptBoard.AdoptBoardVO"/>
+		<typeAlias alias="animalReplyBoardVO" type="com.first.biz.animalReplyBoard.AnimalReplyBoardVO"/>
+		<typeAlias alias="adoptFileVO" type="com.first.biz.adoptFile.AdoptFileVO"/>
+	</typeAliases>
+	
+<!-- DataSource 설정 : business-layer에 bean등록 -->
+	
+	<!-- Sql Mapper설정 -->
+	<mappers>
+		<mapper resource="mappings/mysql/user-mapping.xml"/>
+		<mapper resource="mappings/mysql/adoptBoard-mapping.xml"/>
+		<mapper resource="mappings/mysql/adoptReplyBoard-mapping.xml" />
+		<mapper resource="mappings/mysql/animalBoard-mapping.xml"/>
+		<mapper resource="mappings/mysql/animalBoardReply-mapping.xml"/>
+		<mapper resource="mappings/mysql/adoptFile-mapping.xml" />
+	</mappers>
+	
+</configuration>

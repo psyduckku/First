@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<logger name="jdbc.sqlonly" additivity="false">
+		<level value="info"/>
+		<appender-ref ref="console"/>
+	</logger>
+	
+	<!-- SQL 결과 조회된 데이터의 table을 로그 -->
+<logger name="jdbc.resultsettable" additivity="false"> 
+    <level value="info"/>  
+    <appender-ref ref="console"/> 
+</logger>
+
+</log4j:configuration>

@@ -10,7 +10,6 @@
 <body>
 <footer>
 			<div class="footCon">
-				<h1>내용</h1>
 			</div>
 </footer>
 </body>
