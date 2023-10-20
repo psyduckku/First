@@ -14,7 +14,7 @@
 $(function(){
    $.ajax({
       method : "GET",
-      url : "https://openapi.gg.go.kr/AbdmAnimalProtect?Key=3279648f0a3746a9949f23a9e1b6718f&Type=json&pIndex=1&pSize=300",
+      url : "https://openapi.gg.go.kr/AbdmAnimalProtect?Key=aaa&Type=json&pIndex=1&pSize=300",
       dataType:"json",
       success:function(data) {
          console.log(data.AbdmAnimalProtect)
